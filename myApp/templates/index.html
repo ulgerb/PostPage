@@ -1,0 +1,40 @@
+
+{% extends 'base.html' %}
+
+
+
+{% block body %}
+    {% load static %}
+
+
+    <main>
+        <div>
+            <img src="{% static 'img/car1.jpg' %}" class="card-img-top" alt="...">
+        </div>
+        <div class="row">
+            
+            {% for post in posts %}
+                
+            <div class="col-xl-3 col-md-6 col-12">
+                <div class="card my-4">
+                    <img src="{{ post.image.url }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ post.title }}</h5>
+                        <p class="card-text">{{ post.text_info }}</p>
+                        <div class="d-flex justify-content-center">
+                            <a href="{{ post.id }}/detail/" class="btn btn-primary mx-2">Posta Git</a>
+                            <a href="/upgrade/{{ post.id }}" class="btn btn-success mx-2">Postu Güncelle</a>
+
+                            <a href="/delete/{{ post.id }}/" class="btn btn-danger mx-2">Postu Sil</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+        </div>
+    </main>
+
+    
+    
+{% endblock body %}

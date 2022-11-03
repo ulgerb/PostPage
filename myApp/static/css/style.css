@@ -1,0 +1,18 @@
+
+.card{
+    width: 300px !important;
+    height: 500px !important;
+    background: rgb(99, 127, 144, .5);
+}
+.card img{
+    height: 200px;
+    object-fit: cover;
+}
+.textinput.textInput.form-control{
+    background: blueviolet !important;
+    color: white;
+}
+.textarea.form-control{
+    background: green;
+    color: white;
+}
